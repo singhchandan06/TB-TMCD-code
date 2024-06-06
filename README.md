@@ -1,5 +1,2 @@
 # TB-TMCD-code
- It is Tight Binding Hamiltonian code for low energy bands
- hopping and onsite energies are calculated using VASP + Wannier90 code
- This code is written by Chandan K. Singh and Surajit Sarkar
- We have written this code based on the tight binding Hamilonian from the followinga paper : Phys. Rev. B 88 085433 (2013)
+ This Tight Binding Hamiltonian code for low energy bands calculates hopping and onsite energies using VASP and Wannier90. Authored by Chandan K. Singh and Surajit Sarkar, the code is based on the tight binding Hamiltonian described in the paper "Phys. Rev. B 88, 085433 (2013).
