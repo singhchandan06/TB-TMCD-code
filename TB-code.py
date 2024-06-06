@@ -8,7 +8,6 @@ import random
 import math 
 
 import time
-%matplotlib inline
 import glob
 import numpy as np
 # Make a function file for kpath to calculate the band structure along that line
@@ -75,8 +74,7 @@ def tb_model_tnn(kx,ky,a,E1,E2,t0,t1,t2,t11,t12,t22,r0,r1,r2,r11,r12,u0,u1,u2,u1
     # for spin-orbit coupling
     Hamnew = kron(Imat,Ham)
     Ham_soc = Hamnew + Ham_LS
-    
-  return Ham_soc
+    return Ham_soc
 #provide the hopping intergral and onsite energy terms, lattice paramter a, and number of kpoints nk
 t0 = -0.2308; t1 =  0.3116;
 t2 = 0.3459; t11 =  0.2795; 
