@@ -152,5 +152,5 @@ plt.legend()
 plt.show()
 # make PDF
 fig.tight_layout()
-fig.savefig("band-soc-more-kpt-DFT.pdf")
+fig.savefig("band-TB-DFT.pdf")
 print('Done.\n')
