@@ -113,14 +113,45 @@ for i in arange(nk):
     evals, evecs = LA.eigh(Hamil)
     evals = sorted(evals)
     ssp[:,i] = evals
+
+X0 = kp[0]/kp[299]
+X1 = kp[99]/kp[299]
+X2 = kp[199]/kp[299]
+X3 = kp[299]/kp[299]
+
+
+fig, ax = plt.subplots()
+
+k_node = array([X0,X1,X2,X3])
+for n in range (len(k_node)):
+    ax.axvline(x=k_node[n], linewidth=0.5, color='k')
+
+
+
+# Y-axis label
+ax.set_ylabel("$E-E_F$ (eV)", fontsize=20)
+ax.set_xlim(k_node[0],k_node[-1])
+
+# X-axis values
+ax.set_xticks([X0, X1, X2, X3])
+
+# X-axis label for the above values
+ax.set_xticklabels(['$\Gamma$', 'K', 'M', '$\Gamma$'], fontsize=20)
+#ax.set_yticklabels(fontsize=20)
+
+#plotting
+plt.plot(kp/kp[299], ssp[0,:], 'blue', label='TB-model', linewidth=1.5)
+plt.plot(kp/kp[299], ssp[1,:], 'blue', linewidth=1.5)
+plt.plot(kp/kp[299], ssp[2,:], 'blue', linewidth=1.5)
     
-
-
-
-for j in arange(3):    ## to plot multiple plot together 
-    plt.plot(kp, ssp[j,:], 'k-')
-    
-plt.xlabel(r'$k$')
-plt.ylabel(r'$E$')
+#plt.xlabel(r'$k$')
+#plt.ylabel(r'$E$')
+plt.ylim(-2.0,2.0)
+plt.yticks(fontsize=20)
+plt.legend()
 plt.tight_layout()
 plt.show()
+# make PDF
+fig.tight_layout()
+#fig.savefig("band-soc-with-DFT.pdf")
+print('Done.\n')
