@@ -146,5 +146,5 @@ plt.tight_layout()
 plt.show()
 # make PDF
 fig.tight_layout()
-#fig.savefig("band-soc-with-DFT.pdf")
+fig.savefig("band-soc-MoS2.pdf")
 print('Done.\n')
